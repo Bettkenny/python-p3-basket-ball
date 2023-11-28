@@ -1,5 +1,5 @@
 def game_dict():
-    return {
+            return ({
         "home": {
             "team_name": "Cleveland Cavaliers",
             "colors": ["Wine", "Gold"],
@@ -181,4 +181,36 @@ def game_dict():
                 },
             ]
         }
-    }
+    })
+pass
+def num_points_per_game(player_name, game_dict):
+    
+    player_data = game_dict.get(player_name)
+
+    if player_data:
+        
+        return player_data.get("points_per_game")
+   
+     
+def player_age(player_name, game_dict):
+    player_data = game_dict.get(player_name, {})
+    return player_data.get("age")
+
+    pass
+def team_colors(team_name, game_dict):
+    team_data= game_dict.get(team_name, {})
+    return team_data.get("colors")
+    pass
+def team_names(game_dict):
+        return list(game_dict.keys())
+        pass
+def  player_stats(player_name, game_dict):
+        return game_dict.get(player_name,{})
+
+        pass
+def player_numbers(team_name, game_dict):
+        team_data = game_dict.get(team_name, {})
+        return team_data.get("player_numbers")
+        pass
+def average_rebounds_by_shoe_brand(shoe_brand, game_dict):
+         pass
